@@ -1,1 +1,3 @@
 SLACK_API_TOKEN: 'xoxb-xxx'
+HELPQ_API_KEY: 'helpqapikey'
+HELPQ_URL: 'http://localhost:3000'
