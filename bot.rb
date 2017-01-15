@@ -28,7 +28,12 @@ def create_ticket(name, topic, msg_data)
         }
     }
 
-    resp = HTTParty.get(url, options)
+    begin
+        resp = HTTParty.get(url, options)
+    rescue Exception => e
+        puts "EXCEPTION: #{e.message}"
+        return @real_time_client.message(channel: msg_data['channel'], text: 'HELPq had an error! Please DM @andrew!')
+    end
 
     return handle_error(name, resp, msg_data) unless resp.code == 200
 
@@ -50,7 +55,12 @@ def delete_ticket(name, msg_data)
         }
     }
 
-    resp = HTTParty.get(url, options)
+    begin
+        resp = HTTParty.get(url, options)
+    rescue Exception => e
+        puts "EXCEPTION: #{e.message}"
+        return @real_time_client.message(channel: msg_data['channel'], text: 'HELPq had an error! Please DM @andrew!')
+    end
 
     return handle_error(name, resp, msg_data) unless resp.code == 200
 
@@ -72,7 +82,12 @@ def get_ticket(name, msg_data)
         }
     }
 
-    resp = HTTParty.get(url, options)
+    begin
+        resp = HTTParty.get(url, options)
+    rescue Exception => e
+        puts "EXCEPTION: #{e.message}"
+        return @real_time_client.message(channel: msg_data['channel'], text: 'HELPq had an error! Please DM @andrew!')
+    end
 
     return handle_error(name, resp, msg_data) unless resp.code == 200
 
