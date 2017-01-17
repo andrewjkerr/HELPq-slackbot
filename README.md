@@ -1,6 +1,8 @@
-# HELPq-slackbot
+# [DEPRECIATED] HELPq-slackbot
 
-A Slackbot that interfaces with [Edwin Zhang's HELPq](https://github.com/ehzhang/HELPq)! Written for SwampHacks 2017.
+This Slackbot is no longer needed as all of this functionality has been incorporated into my version of HELPq as a Slack slash command. You can find that here: [https://github.com/andrewjkerr/HELPq](https://github.com/andrewjkerr/HELPq).
+
+~~A Slackbot that interfaces with [Edwin Zhang's HELPq](https://github.com/ehzhang/HELPq)! Written for SwampHacks 2017.~~
 
 ## End-User Guide
 
